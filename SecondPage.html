@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SecondPage</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head> 
+    <style>
+      
+        * { text-decoration: none; 
+            box-sizing: border-box; 
+        }
+        
+        body { 
+            margin: 0; 
+            font-family: Poppins; }
+        h1 { 
+            text-align: center; 
+            letter-spacing: 2px; }
+
+        /* Nav */
+        .navbar {
+          background-color: #F8C8DC;
+          padding: 10px 16px;
+        }
+        .navbar ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          gap: 24px;
+          justify-content: center;
+        }
+        li {
+            list-style: none;
+        }
+
+        li a {
+          color: white;
+          font-size: 24px;
+          font-weight: bold;
+          text-decoration: none;
+          transition: color 0.2s ease, text-decoration 0.2s ease;
+        }
+
+        li a:hover {
+          text-decoration: underline;
+        }
+
+        
+
+        
+        .about-card {
+
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          gap: 24px;
+          padding: 0 8px;
+          max-width: 100%;
+          margin: 20px 0 0 0;
+        }
+
+      
+        .card {
+                
+          border-radius: 10px;
+          padding: 24px;
+          box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        }
+
+        
+        .why-card {
+          background: #ffffff;
+          color: #000000;
+          line-height: 3;
+          text-align: center;
+          font-size: 20px;
+          border-radius: 20px;
+        }
+
+        
+        .right-column {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          font-size: 18px;
+          line-height: 1px;
+        }
+        .pink-card {
+          background: #F8C8DC;
+          color: #ffffff;
+          text-align: center;
+          line-height: 1.9;
+          border-radius: 20px;
+        }
+        .pink-card:hover {
+          cursor:pointer;
+          transform: scale(1.05);
+            transition: 0.5s;
+        }
+
+        
+        .quote { margin-top: 18px; 
+            font-style: italic; 
+            font-weight: normal;
+         }
+
+        .why-card-image {
+          width: 100%;
+          max-width: 900px;
+          height: auto;
+          margin-top: 16px;
+          border-radius: 20px; /* Rounded corners */
+        }
+
+        /* Animations */
+        .slide-in-left {
+          animation: slideInLeft 1s ease-out;
+        }
+
+        .slide-in-right {
+          animation: slideInRight 1s ease-out;
+        }
+
+        @keyframes slideInLeft {
+          from {
+            transform: translateX(-100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        @keyframes slideInRight {
+          from {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        /* Scroll to top button */
+        #scrollToTop {
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background-color: #F8C8DC;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          font-size: 20px;
+          cursor: pointer;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+          transition: background-color 0.3s;
+        }
+
+        #scrollToTop:hover {
+          background-color: #e0a0b8;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Ronni Harper</h1>
+        <p>Date:9/26/2025</p>
+        <p>Assignment: Website Planning</p>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="SecondPage.html">Our Why | Learn More </a></li>
+            <li><a href="Form Page.html">Make your own plan!</a></li>
+        </ul>
+    </nav>
+
+    
+
+      
+      <main class="about-card">
+   
+        <section class="why-card">
+          <h1>Why this matters.</h1>
+          <p>
+            I created SugarBalance because during my years of high-school, I would always experience feeling tired or low of energy.
+            I would sleep my whole day away if I wanted to. As a student-athlete, I would eat 3 meals a day, maybe 4 and still felt
+            low in energy. After sophomore year of college, I finally got blood work done and found out I had low blood sugar. I
+            wasn't surprised because I knew their had to be something wrong with me. After realizing, I didn't know where to look.
+            I was stuck looking on google and reading articles that were not helpful. I wanted to create a space where people like
+            me can come and find resources and tips to help them manage their blood sugar. Especially as an athlete, I need meals to
+            give me energy through the day as well. It was so hard trying to find well balanced meals that help me maintain my levels
+            at a standard. I hope this website can help people like me who struggle with blood sugar and want to live a balanced life.
+          </p>
+          <p class="quote">“Awareness is the first step to change.” - Anonymous</p>
+          <img src="doctor helping.jpg" alt = "Why Image" class="why-card-image">
+        </section>
+
+        <!-- Right column (three stacked pink cards) -->
+        <div class="right-column">
+          <section class="pink-card">
+            <h1>What is Blood Sugar (Glucose)?</h1>
+            <p>
+              Blood sugar, or blood glucose, is the main sugar found in your blood and your body's main source of energy.
+              It comes from the food you eat and is carried to your cells through your bloodstream. Your blood sugar levels can be
+              affected by various factors including diet, physical activity, medications, and overall health conditions.
+            </p>
+          </section>
+
+          <section class="pink-card">
+            <h1>What is Hypoglycemia?</h1>
+            <p>
+              A condition known as hypoglycemia occurs when blood sugar (glucose) levels fall too low, frequently as a result of
+              excessive insulin use, missing meals, or vigorous exercise. Shaking, perspiration, disorientation, lightheadedness,
+              and agitation are some of the symptoms. It may result in seizures, unconsciousness, or even death if treatment is delayed.
+            </p>
+          </section>
+
+          <section class="pink-card">
+            <h1>What is Hyperglycemia?</h1>
+            <p>
+              Blood sugar levels that rise above normal is called Hyperglycemia and they are frequently caused by insufficient insulin
+              production or ineffective insulin utilization as in diabetes. Excessive thirst, frequent urination, fatigue, and blurred
+              vision are typical symptoms. If treatment is not received, it may result in life-threatening diabetic keto acidosis or
+              other severe complications, such as harm to the kidneys, nerves, or eyes.
+            </p>
+          </section>
+        </div>
+      </main>
+
+      <!-- Scroll to Top Button -->
+      <button id="scrollToTop" title="Scroll to Top">↑</button>
+
+      <script>
+        // Add slide-in animations on page load
+        window.addEventListener('load', function() {
+          const whyCard = document.querySelector('.why-card');
+          const rightColumn = document.querySelector('.right-column');
+
+          whyCard.classList.add('slide-in-left');
+          rightColumn.classList.add('slide-in-right');
+        });
+
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 100) {
+            scrollToTopBtn.style.display = 'block';
+          } else {
+            scrollToTopBtn.style.display = 'none';
+          }
+        });
+
+        scrollToTopBtn.addEventListener('click', function() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      </script>
+</body>
+</html>
